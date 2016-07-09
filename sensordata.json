@@ -1,5 +1,57 @@
 {
-Name: "Half FIlled"
-Data: 500
+    "FlatNo": 1,
+    "SensorData": 
+    [
+        {
+            "id": 1,
+            "Name": "100 Filled",
+            "Data": 100
+        },
+        {
+            "id": 2,            
+            "Name": "200 Filled",
+            "Data": 200
+        },
+        {
+            "id": 3,
+            "Name": "300 Filled",
+            "Data": 300
+        },
+        {
+            "id": 4,
+            "Name": "400 Filled",
+            "Data": 400
+        },
+        {
+            "id": 5,
+            "Name": "500 Filled",
+            "Data": 500
+        },
+        {
+            "id": 6,
+            "Name": "600 Filled",
+            "Data": 600
+        },
+        {
+            "id": 7,
+            "Name": "700 Filled",
+            "Data": 700
+        },
+        {
+            "id": 8,
+            "Name": "800 Filled",
+            "Data": 800
+        },
+        {
+            "id": 9,
+            "Name": "900 Filled",
+            "Data": 900
+        },
+        {
+            "id": 10,
+            "Name": "1000 Filled",
+            "Data": 1000
+        }
+    ]
 }
 
