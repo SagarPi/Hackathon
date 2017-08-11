@@ -1,5 +1,19 @@
-var Firebase = require('firebase');
-var tempF = new Firebase("https://aprenderx.firebaseio.com/userDetails");
+var firebase = require('firebase');
+
+var config = {
+    apiKey: "AIzaSyBKRHoD7zk7STbQw-2J9zss7sZ6VAS_7wQ",
+    authDomain: "water-measurement.firebaseapp.com",
+    databaseURL: "https://water-measurement.firebaseio.com",
+    projectId: "water-measurement",
+    storageBucket: "water-measurement.appspot.com",
+    messagingSenderId: "906568193586"
+};
+
+firebase.initializeApp(config);
+
+var dbref = firebase.database().ref();
+// var serviceAccount = require('serviceAccountKey.json');
+// var tempF = new Firebase("https://aprenderx.firebaseio.com/userDetails");
 
 // ********* to create new
 //var pushedItem = tempF.push();
@@ -15,7 +29,7 @@ var tempF = new Firebase("https://aprenderx.firebaseio.com/userDetails");
 // 	console.log("suplydetails");
 // 	return;
 // })
-
+/*
 tempF.orderByChild('flatnumber').equalTo(21).once('value' , function(snapshot){
 	var today = new Date();
 	var todaysDate = today.toDateString();
@@ -44,13 +58,23 @@ tempF.orderByChild('flatnumber').equalTo(21).once('value' , function(snapshot){
 		// newRef.push({date:"10/07/2016",suplied:6});
 	})
 });
+*/
 
+// Initialize Firebase
+// var config = {
+//     apiKey: "AIzaSyBKRHoD7zk7STbQw-2J9zss7sZ6VAS_7wQ",
+//     authDomain: "water-measurement.firebaseapp.com",
+//     databaseURL: "https://water-measurement.firebaseio.com",
+//     projectId: "water-measurement",
+//     storageBucket: "",
+//     messagingSenderId: "906568193586"
+// };
 
 var fs = require('fs');
 var myApplicationRun = function() 
 {
     var obj;
-    fs.readFile('Hackathon/sensordata.json', function (err, data) {
+    fs.readFile('sensordata.json', function (err, data) {
         if (err) throw err;
         obj = JSON.parse(data);
     });
@@ -78,6 +102,12 @@ var myApplicationRun = function()
 myApplicationRun();
 
 var SendDataToCloud = function (flatNum, sensordata, status) {
-    console.log(tempF);
-    console.log("flatNum = " + flatNum + ", sensordata = " + sensordata + ", status = " + status);
+
+    // console.log("flatNum = " + flatNum + ", sensordata = " + sensordata + ", status = " + status);
+
+    dbref.push({
+        flatNum: flatNum,
+        sensorData: sensordata,
+        status: status
+    });
 }
