@@ -1,0 +1,60 @@
+{
+  "system": "waterMeasurementSystem",
+  "data": [
+    {
+      "society": "Sai India Park",
+      "noOfFlats": 20,
+      "waterLimitPerUnit": 20,
+      "address": "Near Santosh Mangal, 16 no bus stop, Pimpri chinchwad, Pune.",
+      "usagesPerDay": [
+        {
+          "date": 1505327400, // will be created by Server automatically daily
+          "usage": [
+            {
+              "flatId": 1,
+              "remaining": 15.56,
+              "runningStatus": true,
+              "data": [
+                {
+                  "amount": 2.56,
+                  "timestamp": 1505372014000
+                },
+                {
+                  "amount": 2.56,
+                  "timestamp": 1505372020000
+                },
+                {
+                  "amount": 2.56,
+                  "timestamp": 1505372026000
+                },
+                {
+                  "amount": 2.56,
+                  "timestamp": 1505372032000
+                },
+                {
+                  "amount": 2.56,
+                  "timestamp": 1505372038000
+                },
+                {
+                  "amount": 2.56,
+                  "timestamp": 1505372044000
+                },
+                {
+                  "amount": 2.56,
+                  "timestamp": 1505372050000
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "flatDetails": [
+        {
+          "flatId": 1,
+          "flatNumber": "A-603",
+          "OwnerName": "Nilesh Shinde"
+        }
+      ]
+    }
+  ]
+}
